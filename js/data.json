@@ -1,0 +1,94 @@
+{
+  "responders": 12,
+  "age": {
+    "18": 4,
+    "23": 2,
+    "24": 1,
+    "25": 2,
+    "26": 1,
+    "27": 1,
+    "30": 1
+  },
+  "gender": {
+    "Male": 9,
+    "Female": 3
+  },
+  "born": [{
+      "city": "London",
+      "country": "UK",
+      "count": 2
+    },
+    {
+      "city": "Blenhiem",
+      "country": "NZ",
+      "count": 1
+    },
+    {
+      "city": "New Plymouth",
+      "country": "NZ",
+      "count": 1
+    },
+    {
+      "city": "Wellington",
+      "country": "NZ",
+      "count": 2
+    },
+    {
+      "city": "Santiago",
+      "country": "CL",
+      "count": 1
+    },
+    {
+      "city": "Hastings",
+      "country": "NZ",
+      "count": 1
+    },
+    {
+      "city": "Australia",
+      "country": "AU",
+      "count": 1
+    },
+    {
+      "city": "Hamilton",
+      "country": "NZ",
+      "count": 1
+    },
+    {
+      "city": "Palmerston North",
+      "country": "NZ",
+      "count": 1
+    },
+    {
+      "city": "Takapuna",
+      "country": "NZ",
+      "count": 1
+    }
+  ],
+  "ethnicity": {
+    "Maori": 1,
+    "New Zealander": 7,
+    "European": 5,
+    "Pacific": 3,
+    "Asain": 2,
+    "South American": 1
+  },
+  "travel": {
+    "Walk": 7,
+    "Bike": 1,
+    "Drive": 2,
+    "Bus": 1,
+    "Train + walk": 0,
+    "Train + bike": 0,
+    "Train + bus": 1
+  },
+  "holiday": {
+    "Auckland": 2,
+    "Taranaki": 2,
+    "Wellington": 8,
+    "Palmerson North": 1,
+    "Nelson": 1
+  },
+  "rating": [
+    4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5
+  ]
+}

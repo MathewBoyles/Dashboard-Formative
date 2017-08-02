@@ -1,0 +1,7 @@
+age       = dounut + average in center
+gender    = pie
+born      = tree
+ethnicity = pie
+travel    = bar
+holiday   = heat map
+rating    = combo
