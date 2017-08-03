@@ -4,7 +4,8 @@ google.charts.load("current", {
 });
 
 var dashboard = {
-  charts: {}
+  charts: {},
+  json: {}
 };
 
 google.charts.setOnLoadCallback(drawCharts);
@@ -14,17 +15,16 @@ function drawCharts () {
     url: "js/data.json",
     dataType: "json",
     success: function(data){
-
-      ageChart(data);
-      genderChart(data);
-      bornChart(data);
-
-
+      dashboard.json = data;
+      ageChart();
+      genderChart();
+      bornChart();
     }
   })
 }
 
-function ageChart(jsonData) {
+function ageChart() {
+  var jsonData = dashboard.json;
   var addData = [
     ["Age", "Number"]
   ];
@@ -47,7 +47,8 @@ function ageChart(jsonData) {
 }
 
 
-function genderChart(jsonData) {
+function genderChart() {
+  var jsonData = dashboard.json;
   var addData = [
     ["Gender", "Number"]
   ];
@@ -70,25 +71,46 @@ function genderChart(jsonData) {
 
 
 
-function bornChart(jsonData) {
+function bornChart() {
+  var jsonData = dashboard.json;
   var addData = [
-    ["City", "Country" , "Number"]
+    ["Name", "Parent" , "Number"]
   ];
-  $.each(jsonData.born, function(data){
+  var hasCountry = [];
+
+  addData.push(["Global", null, 0]);
+
+  $.each(jsonData.born, function(id, data){
+    if(hasCountry.indexOf(data.country) < 0){
+      addData.push([data.country, "Global", 0]);
+      hasCountry.push(data.country);
+    }
     addData.push([data.city, data.country, data.count]);
   });
+
   var data = google.visualization.arrayToDataTable(addData);
 
   var options = {
-    minColor: '#f00',
-    midColor: '#ddd',
-    maxColor: '#0d0',
+    minColor: "#f00",
+    midColor: "#ddd",
+    maxColor: "#0d0",
     headerHeight: 15,
-    fontColor: 'black',
-    showScale: true
+    fontColor: "black",
+    showScale: true,
+    height: 500
   };
   var chart = new google.visualization.TreeMap($("#chart-born")[0]);
   chart.draw(data, options);
+
+  google.visualization.events.addListener(chart, "select", function(){
+    $("#chart-born-reset").removeClass("hide");
+  });
+
+  $("#chart-born-reset").click(function(){
+    dashboard.charts["born"].chart.setSelection(null);
+    $(this).addClass("hide");
+  });
+
   dashboard.charts["born"] = {
     chart: chart,
     data: data,
