@@ -86,9 +86,6 @@ function bornChart(jsonData) {
     addData.push([data.city, data.country, data.count]);
   });
 
-  console.log(hasCountry);
-  console.log(addData);
-
   var data = google.visualization.arrayToDataTable(addData);
 
   var options = {
