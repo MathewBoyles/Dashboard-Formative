@@ -14,6 +14,14 @@
     "Male": 9,
     "Female": 4
   },
+  "ethnicity": {
+    "Maori": 1,
+    "New Zealander": 8,
+    "European": 5,
+    "Pacific": 3,
+    "Asain": 2,
+    "South American": 1
+  },
   "born": [{
       "city": "London",
       "country": "UK",
@@ -65,14 +73,6 @@
       "count": 1
     }
   ],
-  "ethnicity": {
-    "Maori": 1,
-    "New Zealander": 8,
-    "European": 5,
-    "Pacific": 3,
-    "Asain": 2,
-    "South American": 1
-  },
   "travel": {
     "Walk": 7,
     "Bike": 1,
