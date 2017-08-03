@@ -11,12 +11,13 @@ google.charts.setOnLoadCallback(drawCharts);
 
 function drawCharts () {
   $.ajax({
-    url: "/js/data.json",
+    url: "js/data.json",
     dataType: "json",
     success: function(data){
 
       ageChart(data);
       genderChart(data);
+      bornChart(data);
 
 
     }
@@ -61,6 +62,34 @@ function genderChart(jsonData) {
   var chart = new google.visualization.PieChart($("#chart-gender")[0]);
   chart.draw(data, options);
   dashboard.charts["gender"] = {
+    chart: chart,
+    data: data,
+    options: options
+  };
+}
+
+
+
+function bornChart(jsonData) {
+  var addData = [
+    ["City", "Country" , "Number"]
+  ];
+  $.each(jsonData.born, function(data){
+    addData.push([data.city, data.country, data.count]);
+  });
+  var data = google.visualization.arrayToDataTable(addData);
+
+  var options = {
+    minColor: '#f00',
+    midColor: '#ddd',
+    maxColor: '#0d0',
+    headerHeight: 15,
+    fontColor: 'black',
+    showScale: true
+  };
+  var chart = new google.visualization.TreeMap($("#chart-born")[0]);
+  chart.draw(data, options);
+  dashboard.charts["born"] = {
     chart: chart,
     data: data,
     options: options
