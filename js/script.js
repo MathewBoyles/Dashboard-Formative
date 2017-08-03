@@ -72,20 +72,33 @@ function genderChart(jsonData) {
 
 function bornChart(jsonData) {
   var addData = [
-    ["City", "Country" , "Number"]
+    ["Name", "Parent" , "Number"]
   ];
-  $.each(jsonData.born, function(data){
+  var hasCountry = [];
+
+  addData.push(["Global", null, 0]);
+
+  $.each(jsonData.born, function(id, data){
+    if(hasCountry.indexOf(data.country) < 0){
+      addData.push([data.country, "Global", 0]);
+      hasCountry.push(data.country);
+    }
     addData.push([data.city, data.country, data.count]);
   });
+
+  console.log(hasCountry);
+  console.log(addData);
+
   var data = google.visualization.arrayToDataTable(addData);
 
   var options = {
-    minColor: '#f00',
-    midColor: '#ddd',
-    maxColor: '#0d0',
+    minColor: "#f00",
+    midColor: "#ddd",
+    maxColor: "#0d0",
     headerHeight: 15,
-    fontColor: 'black',
-    showScale: true
+    fontColor: "black",
+    showScale: true,
+    height: 500
   };
   var chart = new google.visualization.TreeMap($("#chart-born")[0]);
   chart.draw(data, options);
