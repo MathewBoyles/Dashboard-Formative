@@ -2,6 +2,6 @@ age       = pie
 gender    = pie
 born      = tree
 ethnicity = pie
-travel    = bar
+travel    = column chart
 holiday   = heat map
 rating    = combo

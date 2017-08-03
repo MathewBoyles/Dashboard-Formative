@@ -12,39 +12,91 @@
 </head>
 
 <body>
-  <div class="container">
+
+  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" id="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-links" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#top">17WDWU02</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="nav-links">
+        <ul class="nav navbar-nav">
+          <li><a href="#chart-age">Age</a></li>
+          <li><a href="#chart-gender">Gender</a></li>
+          <li><a href="#chart-ethnicity">Ethnicity</a></li>
+          <li><a href="#chart-born">Place of Birth</a></li>
+          <li><a href="#chart-travel">Mode of Transport</a></li>
+          <li><a href="#chart-rating">Class Rating</a></li>
+          <li><a href="#chart-holiday">Places Travelled</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container" id="container">
 
     <div class="row">
       <div class="col-sm-4">
+        <h3>Age</h3>
         <div id="chart-age"></div>
       </div>
       <div class="col-sm-4">
+        <h3>Gender</h3>
         <div id="chart-gender"></div>
       </div>
       <div class="col-sm-4">
+        <h3>Ethnicity</h3>
         <div id="chart-ethnicity"></div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-sm-9">
+        <h3>
+          Place of Birth
+          <button class="btn btn-sm btn-default pull-right hide" id="chart-born-reset">Reset</button>
+        </h3>
         <div id="chart-born"></div>
-        <button class="btn btn-sm btn-default hide" id="chart-born-reset">Reset</button>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="chart-travel"></div>
+      <div class="col-sm-3">
+        <h3>
+          Intermission
+        </h3>
+        <div id="chart-info-box">
+          <div id="chart-info-box-overlay">
+            #getschwifty
+            <br />
+            <img src="https://68.media.tumblr.com/0d29a110bbd89fface87d17f6dade085/tumblr_oof0gkLGUY1wnofxjo1_500.gif" />
+          </div>
+          <div id="intermission-wrap">
+            <iframe width="100%" height="500" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/220672631&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true&amp;loop=true"></iframe>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-6">
-        <div id="chart-holiday"></div>
+        <h3>Mode of Transport</h3>
+        <div id="chart-travel"></div>
       </div>
-      <div class="col-xs-12">
+      <div class="col-sm-6">
+        <h3>Class Rating</h3>
         <div id="chart-rating"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Places Travelled<br /><small>(During July holiday)</small></h3>
+        <div id="chart-holiday"></div>
       </div>
     </div>
 

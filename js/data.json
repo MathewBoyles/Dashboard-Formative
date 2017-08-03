@@ -82,6 +82,9 @@
     "Train + bike": 0,
     "Train + bus": 1
   },
+  "rating": [
+    3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5
+  ],
   "holiday": {
     "Auckland": 2,
     "Taranaki": 2,
@@ -89,8 +92,5 @@
     "Palmerson North": 1,
     "Nelson": 1,
     "Tauranga": 1
-  },
-  "rating": [
-    3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5
-  ]
+  }
 }

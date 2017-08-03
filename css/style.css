@@ -1,0 +1,44 @@
+body,
+html {
+  background: #1C3144; }
+
+#container {
+  margin-top: 20px;
+  margin-bottom: 30px; }
+  #container .row {
+    margin-top: 50px; }
+
+div[id^="chart-"] {
+  background: #222;
+  overflow: hidden; }
+  div[id^="chart-"]#chart-info-box {
+    color: #FFF;
+    position: relative; }
+    div[id^="chart-"]#chart-info-box iframe {
+      margin-bottom: -5px;
+      width: calc(100% - 1px); }
+    div[id^="chart-"]#chart-info-box #chart-info-box-overlay {
+      background: #222;
+      cursor: not-allowed;
+      color: #FFF;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      padding-top: 150px;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      user-select: none; }
+      div[id^="chart-"]#chart-info-box #chart-info-box-overlay img {
+        width: 100px; }
+      div[id^="chart-"]#chart-info-box #chart-info-box-overlay:hover {
+        opacity: 0.8; }
+
+h3 {
+  background: #222222;
+  border-bottom: 1px solid #dc3912;
+  color: #FFF;
+  margin: 0;
+  padding: 20px;
+  text-align: center; }
