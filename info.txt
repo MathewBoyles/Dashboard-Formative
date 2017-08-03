@@ -1,4 +1,4 @@
-age       = dounut + average in center
+age       = pie
 gender    = pie
 born      = tree
 ethnicity = pie
