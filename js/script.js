@@ -4,7 +4,8 @@ google.charts.load("current", {
 });
 
 var dashboard = {
-  charts: {}
+  charts: {},
+  json: {}
 };
 
 google.charts.setOnLoadCallback(drawCharts);
@@ -14,17 +15,16 @@ function drawCharts () {
     url: "js/data.json",
     dataType: "json",
     success: function(data){
-
-      ageChart(data);
-      genderChart(data);
-      bornChart(data);
-
-
+      dashboard.json = data;
+      ageChart();
+      genderChart();
+      bornChart();
     }
   })
 }
 
-function ageChart(jsonData) {
+function ageChart() {
+  var jsonData = dashboard.json;
   var addData = [
     ["Age", "Number"]
   ];
@@ -47,7 +47,8 @@ function ageChart(jsonData) {
 }
 
 
-function genderChart(jsonData) {
+function genderChart() {
+  var jsonData = dashboard.json;
   var addData = [
     ["Gender", "Number"]
   ];
@@ -70,7 +71,8 @@ function genderChart(jsonData) {
 
 
 
-function bornChart(jsonData) {
+function bornChart() {
+  var jsonData = dashboard.json;
   var addData = [
     ["Name", "Parent" , "Number"]
   ];
@@ -99,6 +101,16 @@ function bornChart(jsonData) {
   };
   var chart = new google.visualization.TreeMap($("#chart-born")[0]);
   chart.draw(data, options);
+
+  google.visualization.events.addListener(chart, "select", function(){
+    $("#chart-born-reset").removeClass("hide");
+  });
+
+  $("#chart-born-reset").click(function(){
+    dashboard.charts["born"].chart.setSelection(null);
+    $(this).addClass("hide");
+  });
+
   dashboard.charts["born"] = {
     chart: chart,
     data: data,
