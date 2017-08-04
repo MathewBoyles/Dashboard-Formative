@@ -331,6 +331,6 @@ $(document).ready(function(){
   });
 
   $("#chart-info-box-overlay").click(function(){
-    $("#intermission-wrap").html($("#intermission-wrap").html());
+    $("#intermission-wrap").html($("#intermission-wrap").html().replace("auto_play=false", "auto_play=true"));
   })
 })
