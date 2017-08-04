@@ -1,7 +1,8 @@
 {
-  "responders": 13,
+  "responders": 14,
   "age": {
     "18": 4,
+    "19": 1,
     "23": 2,
     "24": 1,
     "25": 2,
@@ -12,11 +13,11 @@
   },
   "gender": {
     "Male": 9,
-    "Female": 4
+    "Female": 5
   },
   "ethnicity": {
     "Maori": 1,
-    "New Zealander": 8,
+    "New Zealander": 9,
     "European": 5,
     "Pacific": 3,
     "Asain": 2,
@@ -71,10 +72,15 @@
       "city": "Takapuna",
       "country": "NZ",
       "count": 1
+    },
+    {
+      "city": "Napier",
+      "country": "NZ",
+      "count": 1
     }
   ],
   "travel": {
-    "Walk": 7,
+    "Walk": 8,
     "Bike": 1,
     "Drive": 3,
     "Bus": 1,
@@ -83,7 +89,7 @@
     "Train + bus": 1
   },
   "rating": [
-    3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5
+    3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 3
   ],
   "holiday": {
     "Auckland": 2,
@@ -91,6 +97,7 @@
     "Wellington": 8,
     "Palmerson North": 1,
     "Nelson": 1,
-    "Tauranga": 1
+    "Tauranga": 1,
+    "Napier": 1
   }
 }
