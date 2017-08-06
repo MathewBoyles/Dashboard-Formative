@@ -1,8 +1,9 @@
 {
-  "responders": 14,
+  "responders": 15,
   "age": {
     "18": 4,
     "19": 1,
+    "20": 1,
     "23": 2,
     "24": 1,
     "25": 2,
@@ -13,12 +14,12 @@
   },
   "gender": {
     "Male": 9,
-    "Female": 5
+    "Female": 6
   },
   "ethnicity": {
-    "Maori": 1,
-    "New Zealander": 9,
-    "European": 5,
+    "Maori": 2,
+    "New Zealander": 10,
+    "European": 6,
     "Pacific": 3,
     "Asain": 2,
     "South American": 1
@@ -77,6 +78,11 @@
       "city": "Napier",
       "country": "NZ",
       "count": 1
+    },
+    {
+      "city": "Lower Hutt",
+      "country": "NZ",
+      "count": 1
     }
   ],
   "travel": {
@@ -86,7 +92,7 @@
     "Bus": 1,
     "Train + walk": 0,
     "Train + bike": 0,
-    "Train + bus": 1
+    "Train + bus": 2
   },
   "rating": [
     3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 3
@@ -98,6 +104,8 @@
     "Palmerson North": 1,
     "Nelson": 1,
     "Tauranga": 1,
-    "Napier": 1
+    "Napier": 1,
+    "Rotorua": 1,
+    "Taupo": 1
   }
 }
